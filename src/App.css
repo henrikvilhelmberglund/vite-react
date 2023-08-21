@@ -1,0 +1,19 @@
+header {
+  height: 200px;
+  background-color: lightskyblue;
+}
+
+main {
+  height: 200px;
+  background-color: lightgreen;
+}
+
+li {
+  list-style: number;
+}
+
+footer {
+  height: 100px;
+  background-color: black;
+  color: white;
+}
