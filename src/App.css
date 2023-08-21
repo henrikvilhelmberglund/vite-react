@@ -60,3 +60,7 @@ footer {
   background-color: black;
   color: white;
 }
+
+.nav li {
+  list-style: none;
+}
