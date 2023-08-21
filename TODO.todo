@@ -16,8 +16,8 @@ Footer:
 
 ✔ Returnera en <footer>-tagg, och i den ska det finnas texten: @Copyright . All rights reserved by Batman. Texten ska stå i en variabel. @done(23-08-21 10:40)
 
-☐ Med CSS, ge texten en vit färg, och ge bakgrunden en svart färg. Höjd ska vara 100px.
+✔ Med CSS, ge texten en vit färg, och ge bakgrunden en svart färg. Höjd ska vara 100px. @done(23-08-21 10:42)
 
  
 
-☐ Rendera samtliga komponenter i App.js i rätt ordning.
+✔ Rendera samtliga komponenter i App.js i rätt ordning. @done(23-08-21 10:42)
