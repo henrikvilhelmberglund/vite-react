@@ -46,9 +46,17 @@ header {
   background-color: lightskyblue;
 }
 
+.dark header {
+  background-color: darkblue;
+}
+
 main {
   height: 200px;
   background-color: lightgreen;
+}
+
+.dark main {
+  background-color: darkgreen;
 }
 
 li {
