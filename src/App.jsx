@@ -49,18 +49,20 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? "bg-black text-white" : "bg-white text-black"}>
-      <Navigation links={navLinks}></Navigation>
-      <Header></Header>
-      <MainComponent></MainComponent>
-      <Footer links={navLinks}></Footer>
+    <div className={darkMode ? "dark" : ""}>
+      <div className="dark:bg-black dark:text-white">
+        <Navigation links={navLinks}></Navigation>
+        <Header></Header>
+        <MainComponent></MainComponent>
+        <Footer links={navLinks}></Footer>
 
-      {persons.map((person) => (
-        <Profile profile={person}></Profile>
-      ))}
-      <button onClick={() => setDarkMode((prevState) => !prevState)}>
-        Toggle dark mode
-      </button>
+        {persons.map((person) => (
+          <Profile profile={person}></Profile>
+        ))}
+        <button onClick={() => setDarkMode((prevState) => !prevState)}>
+          Toggle dark mode
+        </button>
+      </div>
     </div>
   );
 }
