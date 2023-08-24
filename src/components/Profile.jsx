@@ -8,7 +8,7 @@ export default function MainComponent({ firstName, lastName, age, hobby }) {
   return (
     <main className="m-2 flex flex-col h-full">
       <h3 className="inline pr-1">{firstName}</h3>
-      {showMore ? (
+      {showMore && (
         <>
           <h3 className="inline pr-1"> {lastName}</h3>
           <span>({age})</span>
@@ -17,7 +17,7 @@ export default function MainComponent({ firstName, lastName, age, hobby }) {
             {hobby}
           </h4>
         </>
-      ) : null}
+      )}
       <div className="justify-end">
         <button onClick={() => setShowMore((prevState) => !prevState)}>
           {showMore ? "Show less" : "Show more"}
