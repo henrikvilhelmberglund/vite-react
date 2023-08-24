@@ -6,7 +6,7 @@ export default function MainComponent({ firstName, lastName, age, hobby }) {
   // const { firstName, lastName, age, hobby } = props.profile;
   const [showMore, setShowMore] = useState(false);
   return (
-    <main className="m-2">
+    <main className="m-2 flex flex-col h-full">
       <h3 className="inline pr-1">{firstName}</h3>
       {showMore ? (
         <>
@@ -18,9 +18,11 @@ export default function MainComponent({ firstName, lastName, age, hobby }) {
           </h4>
         </>
       ) : null}
-      <button onClick={() => setShowMore((prevState) => !prevState)}>
-        {showMore ? "Show less" : "Show more"}
-      </button>
+      <div class="justify-end">
+        <button onClick={() => setShowMore((prevState) => !prevState)}>
+          {showMore ? "Show less" : "Show more"}
+        </button>
+      </div>
     </main>
   );
 }
