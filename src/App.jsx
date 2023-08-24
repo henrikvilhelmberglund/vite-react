@@ -7,6 +7,10 @@ import Navigation from "./Navigation";
 import Profile from "./components/Profile";
 
 function App() {
+  // const darkMode = false;
+  const [darkMode, setDarkMode] = useState(false);
+  const [showProfiles, setShowProfiles] = useState(true);
+
   let navLinks = [
     { name: "Home", url: "home" },
     { name: "About", url: "about" },
@@ -45,9 +49,6 @@ function App() {
       hobby: "Programming",
     },
   ];
-  // const darkMode = false;
-  const [darkMode, setDarkMode] = useState(false);
-  const [showProfiles, setShowProfiles] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -61,13 +62,14 @@ function App() {
         <Footer links={navLinks}></Footer>
 
         {/* short circuit && */}
-        {showProfiles && persons.map((person) => (
-          // pass object as prop
-          // <Profile profile={person}></Profile>
+        {showProfiles &&
+          persons.map((person) => (
+            // pass object as prop
+            // <Profile profile={person}></Profile>
 
-          // spread props
-          <Profile {...person}></Profile>
-        ))}
+            // spread props
+            <Profile {...person}></Profile>
+          ))}
         <button onClick={() => setDarkMode((prevState) => !prevState)}>
           Toggle dark mode
         </button>
