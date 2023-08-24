@@ -50,7 +50,10 @@ function App() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="dark:bg-black dark:text-white">
+      <div
+        // inline styling
+        style={{ border: "2px solid black" }}
+        className="dark:bg-black dark:text-white">
         <Navigation links={navLinks}></Navigation>
         <Header></Header>
         <MainComponent></MainComponent>
