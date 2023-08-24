@@ -60,7 +60,11 @@ function App() {
         <Footer links={navLinks}></Footer>
 
         {persons.map((person) => (
-          <Profile profile={person}></Profile>
+          // pass object as prop
+          // <Profile profile={person}></Profile>
+
+          // spread props
+          <Profile {...person}></Profile>
         ))}
         <button onClick={() => setDarkMode((prevState) => !prevState)}>
           Toggle dark mode
