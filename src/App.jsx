@@ -52,6 +52,8 @@ function App() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
+      {/* alternativ */}
+      {/* <div className={`App ${darkMode && "dark"}> */}
       <div
         // inline styling
         style={{ border: "2px solid black" }}
