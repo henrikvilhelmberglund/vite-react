@@ -18,7 +18,7 @@ export default function MainComponent({ firstName, lastName, age, hobby }) {
           </h4>
         </>
       ) : null}
-      <div class="justify-end">
+      <div className="justify-end">
         <button onClick={() => setShowMore((prevState) => !prevState)}>
           {showMore ? "Show less" : "Show more"}
         </button>
