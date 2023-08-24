@@ -47,6 +47,7 @@ function App() {
   ];
   // const darkMode = false;
   const [darkMode, setDarkMode] = useState(false);
+  const [showProfiles, setShowProfiles] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -59,7 +60,8 @@ function App() {
         <MainComponent></MainComponent>
         <Footer links={navLinks}></Footer>
 
-        {persons.map((person) => (
+        {/* short circuit && */}
+        {showProfiles && persons.map((person) => (
           // pass object as prop
           // <Profile profile={person}></Profile>
 
@@ -68,6 +70,9 @@ function App() {
         ))}
         <button onClick={() => setDarkMode((prevState) => !prevState)}>
           Toggle dark mode
+        </button>
+        <button onClick={() => setShowProfiles((prevState) => !prevState)}>
+          {showProfiles ? "Hide profiles" : "Show profiles"}
         </button>
       </div>
     </div>
